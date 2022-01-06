@@ -1,9 +1,10 @@
 <mat-card class="main-card">
 <br>
-<h1> CALCULATOR </h1>
+<h1 class="header-h1"> CALCULATOR </h1>
+<br>
 
+    <!-- 2 Inputs for entering the value -->
     <div class="value">
-
         <mat-form-field class="example-full-width" appearance="fill">
             <input matInput type="number" placeholder="Enter first value" [(ngModel)]='num1' name="num1" class="form-control">&nbsp;&nbsp;&nbsp;
         </mat-form-field>
@@ -11,18 +12,19 @@
         <mat-form-field class="example-full-width" appearance="fill">
             <input matInput type="number" placeholder="Enter second value" [(ngModel)]='num2' name="num2" class="form-control">
         </mat-form-field>
-
     </div>
 
+    <!-- Buttons; add, subtract, multiply, divide -->
     <div class="">
         <br>
-            <button mat-raised-button color="warn" class="btn btn-success1" (click) = 'sum()'> + </button>&nbsp;&nbsp;&nbsp;
-            <button mat-raised-button color="primary" class="btn btn-success" (click) = 'subtract()'> - </button>&nbsp;&nbsp;&nbsp;
-            <button mat-raised-button color="accent" class="btn btn-success" (click) = 'mult()'> X </button>&nbsp;&nbsp;&nbsp;
-            <button mat-raised-button (click) = 'div()'> / </button>
+            <button mat-raised-button color="warn" (click) = 'sum()'> + </button>&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button color="primary" (click) = 'subtract()'> - </button>&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button color="accent" (click) = 'mult()'> X </button>&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button class="divcolor" (click) = 'div()'> / </button>
             <br><br><br>
         </div>
 
+    <!-- Display the result here -->
     <div class="card-footer">
         <mat-card class="card-style">
             <h6>{{resultheading}}</h6>
@@ -30,5 +32,6 @@
         </mat-card>
     </div>
 
+<br>
 </mat-card>
 

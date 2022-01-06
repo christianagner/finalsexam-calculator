@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
 })
 export class CalculatorComponent  {
 
-  value = '';
-
 	public num1!: number;
 	public num2!:number;
 	public result!:number;
